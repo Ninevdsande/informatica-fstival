@@ -6,6 +6,13 @@ body {
     margin: 0;
     background-color: #FFC46B;
 }
+.content{
+    display:flex;
+}
+
+navigatie {
+    
+}
 footer {
     background-color: #ff9664;
     position: fixed;
