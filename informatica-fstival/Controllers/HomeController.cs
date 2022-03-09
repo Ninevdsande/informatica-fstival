@@ -18,7 +18,7 @@ namespace informatica_fstival.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Contact()
         {
             return View();
         }
