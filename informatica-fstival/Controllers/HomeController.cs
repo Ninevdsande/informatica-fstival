@@ -18,13 +18,22 @@ namespace informatica_fstival.Controllers
             _logger = logger;
         }
 
-        public IActionResult Contact()
+        
+        public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [Route("show-all")]
+        public IActionResult ShowAll()
         {
+            return View();
+        }
+        [Route("contact")]
+        public IActionResult Contact( string firstname, string lastname)
+        {
+            ViewData["firstname"] = firstname;
+            ViewData["lastname"]= lastname;
             return View();
         }
 
