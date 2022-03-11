@@ -30,6 +30,13 @@ namespace informatica_fstival.Controllers
             return View();
         }
         [Route("contact")]
+       
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public IActionResult Contact( string firstname, string lastname)
         {
             ViewData["firstname"] = firstname;
