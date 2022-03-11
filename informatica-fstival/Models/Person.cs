@@ -2,7 +2,7 @@ using System;
 
 namespace informatica_fstival.Models
 {
-    public class ErrorViewModel
+    public class Person
     {
         public string RequestId { get; set; }
 

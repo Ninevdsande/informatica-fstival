@@ -6,7 +6,7 @@ header {
 
 body {
     margin: 0;
-    background-color:#ffdca6;
+    background-color: #FFDCA6;
 }
 
 .content {
@@ -37,4 +37,19 @@ footer {
 .nieuws {
     background-color: #FFC46B;
     padding: 50px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 15px;
+    width: 400px;
+}
+
+tr {
+    background-color: #FA918F;
+    padding: 20px;
+}
+
+ul li {
+    padding: 15px;
 }
