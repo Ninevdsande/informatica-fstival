@@ -37,8 +37,11 @@ namespace informatica_fstival.Controllers
         }
 
         [HttpPost]
+        [Route("contact")]
         public IActionResult Contact(Person person)
         {
+            if (ModelState.IsValid)
+                return Redirect("/Succes");
             return View(person);
         }
 
@@ -46,6 +49,11 @@ namespace informatica_fstival.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [Route("Succes")]
+        public IActionResult Succes()
+        {
+            return View();
         }
     }
 }
