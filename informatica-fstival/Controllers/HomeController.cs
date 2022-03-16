@@ -37,11 +37,9 @@ namespace informatica_fstival.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contact( string firstname, string lastname)
+        public IActionResult Contact(Person person)
         {
-            ViewData["firstname"] = firstname;
-            ViewData["lastname"]= lastname;
-            return View();
+            return View(person);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
