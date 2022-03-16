@@ -1,10 +1,12 @@
-﻿@{
+﻿@model Person
+@{
     ViewData["Title"] = "Contact";
 }
 <h1>@ViewData["Title"]</h1>
 
 <form method="post">
     <div>Voornaam: <input type="text" name="firstname"/></div>
+    @Html.ValidationMessageFor(m -> m.FirstName)
     <div>Achternaam: <input type="text" name="lastname"/></div>
     <div>E-mail: <input type="text" name="email"/></div>
     <div>Telefoon: <input type="text" name="phone"/></div>
@@ -16,5 +18,5 @@
 
 @if (Model!= null)
 {
-    <p>Hallo @Model.FirstName die achternaam @Model.lastName heeft</p>
+    <p>Hallo @Model.FirstName die achternaam @Model.LastName heeft</p>
 }
