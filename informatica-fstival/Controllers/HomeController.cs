@@ -50,5 +50,10 @@ namespace informatica_fstival.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        [Route("Succes")]
+        public IActionResult Succes()
+        {
+            return View();
+        }
     }
 }
