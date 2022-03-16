@@ -1,7 +1,7 @@
 ﻿
 header {
     background-color: #ff9664;
-    height: 201px;
+    height: 200px;
 }
 
 body {
@@ -47,9 +47,15 @@ table {
 
 tr {
     background-color: #FA918F;
-    padding: 20px;
 }
 
 ul li {
     padding: 15px;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
 }
