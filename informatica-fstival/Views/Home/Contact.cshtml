@@ -4,8 +4,17 @@
 <h1>@ViewData["Title"]</h1>
 
 <form method="post">
-    Voornaam:<input type = "text" name="firstname" />
-    Achternaam:<input type = "text" name="lastname" />
-   <input type= "submit" value="opslaan" />
+    <div>Voornaam: <input type="text" name="firstname"/></div>
+    <div>Achternaam: <input type="text" name="lastname"/></div>
+    <div>E-mail: <input type="text" name="email"/></div>
+    <div>Telefoon: <input type="text" name="phone"/></div>
+    <div>Adres: <input type="text" name="address"/></div>
+    <div>Beschrijving: <input type="text" name="address"/></div>
+   <input type= "submit" value="verstuur" />
 </form>
-<p>Use this page to detail your site's privacy policy.</p>
+<p>Als u vragen of een opmerking heeft, vul dan graag dit formulier in, wij komen dan zo snel mogelijk op u terug.</p>
+
+@if (Model!= null)
+{
+    <p>Hallo @Model.FirstName die achternaam @Model.lastName heeft</p>
+}
