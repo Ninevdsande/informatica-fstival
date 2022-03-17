@@ -55,5 +55,11 @@ namespace informatica_fstival.Controllers
         {
             return View();
         }
+
+        [Route("detail")]
+        public IActionResult Detail()
+        {
+            return View();
+        }
     }
 }

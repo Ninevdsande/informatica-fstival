@@ -1,5 +1,4 @@
-﻿
-header {
+﻿header {
     background-color: #ff9664;
     height: 200px;
 }
@@ -21,7 +20,7 @@ footer {
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 70px;
+    height: 60px;
 }
 
 .films {
@@ -72,10 +71,41 @@ ul li {
     text-align: center;
     padding: 15px 0px;
     text-decoration: none;
-    font-size: 21px;
 }
 
 .nav a:hover {
     background-color: #ffdca6;
     color: #000000;
+}
+
+.dune {
+    width: 80%;
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+}
+
+.div1 {
+    flex-basis: 50%;
+    width: 50%;
+}
+
+.div2 {
+    flex-basis: 50%;
+    width: 50%;
+    padding: 30px;
+}
+
+.div2-1 {
+    display: flex;
+}
+
+.div2-1-1 {
+    flex-basis: 25%;
+}
+
+.div2-1-2 {
+    flex-basis: 75%;
 }
