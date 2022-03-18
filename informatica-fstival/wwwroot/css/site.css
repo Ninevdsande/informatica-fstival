@@ -12,9 +12,6 @@ body {
     display: flex;
 }
 
-navigatie {
-}
-
 footer {
     background-color: #ff9664;
     position: fixed;
@@ -23,9 +20,17 @@ footer {
     height: 60px;
 }
 
+.text-center h1 {
+    padding: 20px;
+}
+
 .films {
     background-color: #FFC46B;
     padding: 50px;
+}
+
+.films img {
+    padding: 20px;
 }
 
 .nu {
@@ -33,19 +38,19 @@ footer {
     padding: 50px;
 }
 
-.nieuws {
-    background-color: #FFC46B;
-    padding: 50px;
-}
-
-table {
+.nu table {
     border-collapse: separate;
     border-spacing: 15px;
     width: 400px;
 }
 
-tr {
+.nu tr {
     background-color: #FA918F;
+}
+
+.nieuws {
+    background-color: #FFC46B;
+    padding: 50px;
 }
 
 ul li {
@@ -80,7 +85,7 @@ ul li {
 
 .dune {
     width: 80%;
-    padding: 50px;
+    padding: 35px;
 }
 
 .container {
@@ -88,13 +93,11 @@ ul li {
 }
 
 .div1 {
-    flex: 1;
-    width: 50%;
+    width: 30%;
 }
 
 .div2 {
-    flex: 2;
-    width: 50%;
+    width: 70%;
     padding: 30px;
 }
 
@@ -106,6 +109,38 @@ ul li {
     flex-basis: 25%;
 }
 
-.div2-1-2 {
-    flex-basis: 75%;
+.div2-2 {
+    background-color: #d4bbdb;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.div2-2 p {
+    text-align: center;
+}
+
+div2-2 td {
+
+}
+
+.div3 {
+    padding: 40px;
+    padding-top: 0px;
+}
+
+.div3-1 {
+    background-color: #d4bbdb;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.div3-1 table {
+    border-collapse: separate;
+    min-width: 60%;
+    border-spacing: 30px 15px;
+}
+
+.div3-1 td {
+    text-align: center;
+    background-color: #faaeab;
 }
