@@ -6,14 +6,14 @@
 
 <h1 class= "display-4" ></h1>
 <div class="products">
-    <div class="product">
+   
         @foreach (var product in Model)
-        {
+        { <div class="product">
             <h3>@product.Naam</h3>
             <p>@product.Prijs</p>
-            <p>@product.Beschikbaarheid</p>
+            <p>@product.Beschikbaarheid</p> </div>
         }
-    </div>
+   
     }
 </div>
 <html>
