@@ -144,3 +144,8 @@ div2-2 td {
     text-align: center;
     background-color: #faaeab;
 }
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+}
