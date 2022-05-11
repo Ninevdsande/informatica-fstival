@@ -3,14 +3,16 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<div class="text-center">
-    <h1 class= "display-4" ></h1>
-    <ul>
+<h1 class= "display-4" ></h1>
+<div class="products">
+    <div class="product">
         @foreach (var product in Model)
         {
-            <li>@product.Naam - @product.Prijs - @product.Beschikbaarheid</li>
+            <h3>@product.Naam</h3>
+            <p>@product.Prijs</p>
+            <p>@product.Beschikbaarheid</p>
         }
-    </ul>
+    </div>
     }
 </div>
 <html>
