@@ -145,7 +145,14 @@ div2-2 td {
     background-color: #faaeab;
 }
 
-.product {
+.products {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
+.product {
+    background-color: pink;
+    padding: 15px;
 }
