@@ -66,6 +66,8 @@ namespace informatica_fstival.Controllers
                 Film f = new Film();
                 f.Titel = row["naam"].ToString();
                 f.Beschrijving = row["beschrijving"].ToString();
+                f.Regisseur = row["regisseur"].ToString();
+                f.Cast = row["cast"].ToString();
                 f.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten
