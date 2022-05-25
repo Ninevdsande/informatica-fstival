@@ -52,6 +52,29 @@ namespace informatica_fstival.Controllers
             return products;
         }
 
+        public Film GetFilm(int id)
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows($"select * from film where id = {id}");
+
+            // lijst maken om alle producten in te stoppen
+            List<Film> films = new List<Film>();
+
+            foreach (var row in rows)
+            {
+                // Voor elke rij maken we nu een product
+                Film f = new Film();
+                f.Titel = row["naam"].ToString();
+                f.Beschrijving = row["beschrijving"].ToString();
+                f.Id = Convert.ToInt32(row["id"]);
+
+                // en dat product voegen we toe aan de lijst met producten
+                films.Add(f);
+            }
+
+            return films[0];
+        }
+
 
         [Route("show-all")]
         public IActionResult ShowAll()
@@ -89,6 +112,15 @@ namespace informatica_fstival.Controllers
         public IActionResult Detail()
         {
             return View();
+        }
+
+
+        [Route("film/{id}")]
+        public IActionResult FilmDetails(int id)
+        {
+            var film = GetFilm(id);
+
+            return View(film);
         }
     }
 }

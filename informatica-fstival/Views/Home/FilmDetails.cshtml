@@ -1,0 +1,36 @@
+﻿@using informatica_fstival.Database
+@model Film
+<h1>@Model.Titel</h1>
+<p>@Model.Beschrijving</p>
+
+    <div class="container">
+        <div class="div1">
+            <img class="dune" src="~/img/dune.jpg" width="400" />
+        </div>
+        <div class="div2">
+            <h1>@Model.Titel</h1>
+            <div class="div2-1">
+                <div class="div2-1-1">
+                    <p><b>Cast:</b></p>
+                </div>
+                <div class="div2-1-2">
+                    <p>Timothee Chalamet, Zendaya, Oscar Isaac, Rebecca Ferguson ...</p>
+                </div>
+            </div>
+            <div class="div2-1">
+                <div class="div2-1-1">
+                    <p><b>Regisseur:</b></p>
+                </div>
+                <div class="div2-1-2">
+                    <p>Denis Villeneuve</p>
+                    <br />
+                </div>
+            </div>
+            <div class="div2-2">
+                <p>
+                    <b>Over:</b>
+                    <br /><br />
+                    @Model.Beschrijving
+                </p>
+            </div>
+        </div>
