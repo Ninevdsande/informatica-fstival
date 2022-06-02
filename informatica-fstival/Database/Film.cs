@@ -11,5 +11,7 @@
         public string Regisseur { get; set; }
 
         public string Cast { get; set; }
+
+        public string Poster { get; set; }
     }
 }
