@@ -24,15 +24,6 @@ footer {
     padding: 20px;
 }
 
-.films {
-    background-color: #FFC46B;
-    padding: 50px;
-}
-
-.films img {
-    padding: 20px;
-}
-
 .nu {
     background-color: #FFC46B;
     padding: 50px;
@@ -119,10 +110,6 @@ ul li {
     text-align: center;
 }
 
-div2-2 td {
-
-}
-
 .div3 {
     padding: 40px;
     padding-top: 0px;
@@ -145,14 +132,20 @@ div2-2 td {
     background-color: #faaeab;
 }
 
-.products {
+.films {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 15px;
+    padding: 50px;
+    background-color: #FFC46B;
 }
 
-.product {
-    background-color: pink;
-    padding: 15px;
+.film img:hover {
+    opacity: 80%;
+}
+
+.back {
+    background-color: #ffdca6;
+    font-size: 50px;
+    border: none;
 }

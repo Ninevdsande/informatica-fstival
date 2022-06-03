@@ -1,20 +1,11 @@
 ﻿@using informatica_fstival.Database
-@model List<Product>
+@model List<Film>
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <h1 class= "display-4" ></h1>
-<div class="products">
    
-        @foreach (var product in Model)
-        { <div class="product">
-            <h3>@product.Naam</h3>
-            <p>@product.Prijs</p>
-            <p>@product.Beschikbaarheid</p> </div>
-        }
-   
-    }
 </div>
 <html>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -24,11 +15,13 @@
             Films <BR><BR>
         </h1>
             <div class="films">
-                <a href="detail">
-                    <img src="~/img/dune.jpg" height="350" />
-                </a>
-                <img src="~/img/ghostbusters.jpg" height="350" />
-                <img src="~/img/houseofgucci.jpg" height="350" />
+                @foreach (var film in Model)
+                { <div class="film">
+                    <a href="/film/@film.Id" >
+                        <img src="@film.Poster" height="350" />
+                    </a>
+                  </div>
+                }
             </div>
             <BR><BR>
         <h1>

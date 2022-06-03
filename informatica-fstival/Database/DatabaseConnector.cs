@@ -10,8 +10,8 @@ namespace informatica_fstival.Database
         public static List<Dictionary<string, object>> GetRows(string query)
         {
             // stel in waar de database gevonden kan worden
-            //string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
-            string connectionString = "Server=172.16.160.21;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
+            string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
+            //string connectionString = "Server=172.16.160.21;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
          
 
             // maak een lege lijst waar we de namen in gaan opslaan
