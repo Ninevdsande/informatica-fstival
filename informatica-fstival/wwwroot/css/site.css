@@ -149,3 +149,112 @@ ul li {
     font-size: 50px;
     border: none;
 }
+
+.input {
+    position: absolute;
+    left: 175px;
+    font-size: 16px;
+    height: 30px;
+}
+
+.contactpage {
+    padding: 40px;
+}
+
+.contact {
+    display: flex;
+}
+
+.contact-1 {
+    width: 72%;
+}
+
+.contact-2 {
+    width: 28%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-1 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.contactform .field-validation-error {
+    color: red;
+    position: absolute;
+    left: 420px;
+}
+
+.label {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.submit {
+    background: #faaeab;
+    border-color: #faaeab;
+    color: #000;
+    float: left;
+    padding: 8px 12px;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 20px
+}
+
+.submit:hover {
+    border-color: #d99693;
+    background: #d99693;
+    transition: 0.3s;
+}
+
+.data {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #d99693;
+    margin: 10px auto;
+    margin-bottom: 15px
+}
+
+.icon {
+    width: 25px;
+    padding: 7px
+}
+
+@media only screen and (max-width: 850px) {
+    .contact {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .contact-1 .contact-2 {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    .contact-2 {
+        padding: 50px;
+    }
+}

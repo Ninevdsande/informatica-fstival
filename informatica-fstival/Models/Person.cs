@@ -11,7 +11,7 @@ namespace informatica_fstival.Models
         [Required (ErrorMessage = "Gelieve uw achternaam in te vullen")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Emailadres is verplicht")]
+        [Required(ErrorMessage = "E-mailadres is verplicht")]
         [EmailAddress(ErrorMessage = "Geen geldig email adres")]
         public string Email { get; set; }
         public string Phone { get; set; }

@@ -2,22 +2,82 @@
 @{
     ViewData["Title"] = "Contact";
 }
-<h1>@ViewData["Title"]</h1>
+<div class="contactpage">
+    <button onclick="history.back()" class="back">&#8249;</button>
+    <h1>@ViewData["Title"]</h1>
 
-<form method="post">
-    <div>Voornaam: <input type="text" name="firstname"/></div>
-    @Html.ValidationMessageFor(m => m.FirstName)
-    <div>Achternaam: <input type="text" name="lastname"/></div>
-    @Html.ValidationMessageFor(m => m.LastName)
-    <div>E-mail: <input type="text" name="email"/></div>
-    @Html.ValidationMessageFor(m => m.Email)
-    <div>Telefoon: <input type="text" name="phone"/></div>
-    <div>Adres: <input type="text" name="address"/></div>
-    <div>
-        Beschrijving: 
-        @Html.TextAreaFor(m=> m.Description)
+    <div class="contact">
+        <div class="contact-1">
+            <form method="post" class="contactform">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="form-group">
+                            <label class="label">Voornaam:</label>
+                            <input type="text" class="input" name="firstname" placeholder="Naam" />
+                            @Html.ValidationMessageFor(m => m.FirstName)
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group">
+                            <label class="label">Achternaam:</label>
+                            <input type="text" class="input" name="lastname" placeholder="Naam" />
+                            @Html.ValidationMessageFor(m => m.LastName)
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group">
+                            <label class="label">E-mail adres:</label>
+                            <input type="text" class="input" name="email" placeholder="E-mail" />
+                            @Html.ValidationMessageFor(m => m.Email)
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group">
+                            <label class="label">Telefoonnummer:</label>
+                            <input type="text" class="input" name="phone" placeholder="Telefoon" />
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group">
+                            <label class="label">Bericht:</label>
+                            <textarea class="input" name="description" placeholder="Beschrijving"></textarea>
+                            @Html.ValidationMessageFor(m => m.Description)
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group">
+                            <input type="submit" value="Verstuur bericht" class="submit" />
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p>Als u vragen of een opmerking heeft, vul dan graag dit formulier in, wij komen dan zo snel mogelijk op u terug.</p>
+            <p></p>
+        </div>
+        <div class="contact-2">
+            <div class="row">
+                <div class="col-2">
+                    <div class="data">
+                        <img src="~/img/maps.jpg" class="icon" />
+                    </div>
+                    <p><b>Adres:  </b>Herenstraat 10, Delft</p>
+                </div>
+                <div class="col-2">
+                    <div class="data">
+                        <img src="~/img/tel.jpg" class="icon" />
+                    </div>
+                    <p><b>Telefoon:  </b> <a href="tel:+31 643653119">+31 643653119</a></p>
+                </div>
+                <div class="col-2">
+                    <div class="data">
+                        <img src="~/img/email.png" class="icon" />
+                    </div>
+                    <p><b>E-mail:  </b> <a href="mailto:email@example.com">info@cinemania.nl</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-   <input type= "submit" value="verstuur" />
-</form>
-<p>Als u vragen of een opmerking heeft, vul dan graag dit formulier in, wij komen dan zo snel mogelijk op u terug.</p>
+    <p></p>
+</div>
 
