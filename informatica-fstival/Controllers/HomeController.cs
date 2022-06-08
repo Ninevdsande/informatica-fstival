@@ -54,7 +54,7 @@ namespace informatica_fstival.Controllers
         public Film GetFilm(int id)
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows($"select * from film where id = {id}");
+            var rows = DatabaseConnector.GetRows($"select * from film_uitzending inner join film on film_uitzending.film_id = film.id where film_id = {id}");
 
             // lijst maken om alle producten in te stoppen
             List<Film> films = new List<Film>();
@@ -68,6 +68,7 @@ namespace informatica_fstival.Controllers
                 f.Regisseur = row["regisseur"].ToString();
                 f.Cast = row["cast"].ToString();
                 f.Poster = row["poster"].ToString();
+                f.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
                 f.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten

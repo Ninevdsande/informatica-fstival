@@ -13,5 +13,7 @@
         public string Cast { get; set; }
 
         public string Poster { get; set; }
+        
+        public int Beschikbaarheid { get; set; }
     }
 }
