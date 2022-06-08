@@ -1,0 +1,19 @@
+﻿@using informatica_fstival.Database
+@model List<Film>
+
+<div class="card-group">
+    <div class="cards">
+        @foreach (var film in Model)
+            {
+            <div class="card">
+                <div class="card-1">
+                    <img src="@film.Poster" />
+                </div>
+                <div class="card-2">
+                    <h3>@film.Titel</h3>
+                    tijden
+                </div>
+            </div>
+            }
+    </div>
+</div>

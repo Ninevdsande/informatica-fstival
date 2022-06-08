@@ -14,7 +14,7 @@ namespace informatica_fstival.Models
         [Required(ErrorMessage = "E-mailadres is verplicht")]
         [EmailAddress(ErrorMessage = "Geen geldig email adres")]
         public string Email { get; set; }
-        public string Phone { get; set; }
+        public string Telefoon { get; set; }
         public string Address { get; set; }
       
         [Required(ErrorMessage = "Gelieve uw opmerking of vraag achter te laten")]

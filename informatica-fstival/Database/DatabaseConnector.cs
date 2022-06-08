@@ -1,4 +1,5 @@
 ﻿
+using informatica_fstival.Models;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
@@ -6,12 +7,13 @@ namespace informatica_fstival.Database
 {
     public static class DatabaseConnector
     {
+        // stel in waar de database gevonden kan worden
+        //string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
+        public static string connectionString = "Server=172.16.160.21;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
 
         public static List<Dictionary<string, object>> GetRows(string query)
         {
-            // stel in waar de database gevonden kan worden
-            //string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
-            string connectionString = "Server=172.16.160.21;Port=3306;Database=110692;Uid=110692;Pwd=inf2122sql;";
+           
          
 
             // maak een lege lijst waar we de namen in gaan opslaan
@@ -52,5 +54,23 @@ namespace informatica_fstival.Database
             return rows;
         }
 
+        public static void SavePerson(Person person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam, achternaam, emailadres, telefoon, bericht) VALUES(?naam, ?achternaam, ?emailadres, ?telefoon, ?bericht)", conn);
+
+                // Elke parameter moet je handmatig toevoegen aan de query
+                cmd.Parameters.Add("?naam", MySqlDbType.Text).Value = person.FirstName;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.LastName;
+                cmd.Parameters.Add("?emailadres", MySqlDbType.Text).Value = person.Email;
+                cmd.Parameters.Add("?telefoon", MySqlDbType.Text).Value = person.Telefoon;
+                cmd.Parameters.Add("?bericht", MySqlDbType.Text).Value = person.Description;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
     }
+   
 }

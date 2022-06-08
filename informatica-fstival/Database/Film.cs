@@ -15,5 +15,9 @@
         public string Poster { get; set; }
         
         public int Beschikbaarheid { get; set; }
+
+        public string Start { get; set; }
+
+        public string Eind { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-
+using System.Linq;
 
 namespace informatica_fstival.Controllers
 {
@@ -22,13 +22,13 @@ namespace informatica_fstival.Controllers
         public IActionResult Index()
         {
             // lijst met producten ophalen
-            var films = GetAllProducts();
+            var films = GetAllFilms();
 
             // de lijst met producten in de html stoppen
-            return View(films);
+            return View(films.Take(4).ToList());
         }
 
-        public List<Film> GetAllProducts()
+        public List<Film> GetAllFilms()
         {
             // alle producten ophalen uit de database
             var rows = DatabaseConnector.GetRows("select * from film");
@@ -69,6 +69,8 @@ namespace informatica_fstival.Controllers
                 f.Cast = row["cast"].ToString();
                 f.Poster = row["poster"].ToString();
                 f.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                f.Start = row["start"].ToString();
+                f.Eind = row["eind"].ToString();
                 f.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten
@@ -96,8 +98,10 @@ namespace informatica_fstival.Controllers
         public IActionResult Contact(Person person)
         {
             if (ModelState.IsValid)
+                DatabaseConnector.SavePerson(person);
                 return Redirect("/Succes");
             return View(person);
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -124,6 +128,14 @@ namespace informatica_fstival.Controllers
             var film = GetFilm(id);
 
             return View(film);
+
+        }
+        [Route("overzicht")]
+        public IActionResult AllFilms()
+        {
+            var films = GetAllFilms();
+
+            return View(films);
         }
     }
 }

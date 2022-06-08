@@ -24,21 +24,6 @@ footer {
     padding: 20px;
 }
 
-.nu {
-    background-color: #FFC46B;
-    padding: 50px;
-}
-
-.nu table {
-    border-collapse: separate;
-    border-spacing: 15px;
-    width: 400px;
-}
-
-.nu tr {
-    background-color: #FA918F;
-}
-
 .nieuws {
     background-color: #FFC46B;
     padding: 50px;
@@ -246,6 +231,42 @@ ul li {
     padding: 7px
 }
 
+/*Alle films pagina*/
+
+.card-group {
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 30px 3%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    background-color: #FFC46B;
+    border-radius: 2rem;
+    width: 45%;
+}
+
+.card-1 {
+    padding: 20px;
+}
+
+    .card-1 img {
+        height: 250px;
+        width: 170px;
+    }
+
+.card-2 {
+    padding: 10px;
+}
+
+
+/*Media responsive*/
+
 @media only screen and (max-width: 850px) {
     .contact {
         -webkit-flex-direction: column;
@@ -259,5 +280,9 @@ ul li {
 
     .contact-2 {
         padding: 50px;
+    }
+
+    .card {
+        width: 100%;
     }
 }
