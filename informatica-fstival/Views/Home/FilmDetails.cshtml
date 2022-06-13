@@ -1,47 +1,81 @@
 ﻿@using informatica_fstival.Database
 @model Film
 
-    <div class="container">
-        <div class="div1">
-            <button onclick="history.back()" class="back">&#8249;</button>
-            <br/>
-            <img class="dune" src="@Model.Poster" width="400" />
+<div class="container">
+    <div class="div1">
+        <button onclick="history.back()" class="back">&#8249;</button>
+        <br />
+        <img class="detail-poster" src="@Model.Poster" width="400" />
+    </div>
+    <div class="div2">
+        <h1>@Model.Titel</h1>
+        <div class="div2-1">
+            <div class="div2-1-1">
+                <p><b>Cast:</b></p>
+            </div>
+            <div class="div2-1-2">
+                <p>@Model.Cast</p>
+            </div>
         </div>
-        <div class="div2">
-            <h1>@Model.Titel</h1>
-            <div class="div2-1">
-                <div class="div2-1-1">
-                    <p><b>Cast:</b></p>
-                </div>
-                <div class="div2-1-2">
-                    <p>@Model.Cast</p>
-                </div>
+        <div class="div2-1">
+            <div class="div2-1-1">
+                <p><b>Regisseur:</b></p>
             </div>
-            <div class="div2-1">
-                <div class="div2-1-1">
-                    <p><b>Regisseur:</b></p>
-                </div>
-                <div class="div2-1-2">
-                    <p>@Model.Regisseur</p>
-                    <br />
-                </div>
+            <div class="div2-1-2">
+                <p>@Model.Regisseur</p>
+                <br />
             </div>
-            <div class="div2-2">
-                <p>
-                    <b>Over:</b>
-                    <br /><br />
-                    @Model.Beschrijving
-                </p>
-            </div>
-            <div class="div2-3">
-                 <b>Beschikbaarheid:</b>
-                    <br /><br />
+        </div>
+        <div class="div2-2">
+            <p>
+                <b>Over:</b>
+                <br /><br />
+                @Model.Beschrijving
+            </p>
+        </div>
+        <div class="div2-3">
+            <div>
+                <b>Aantal tickets beschikbaar:  </b>
                 @Model.Beschikbaarheid
+                <br /><br />
             </div>
-             <div class= "div4">
-            @Model.Start
+            <div class="tickets">
+                <div class="groep"><p>Volwassenen</p></div>
+                <div class="prijs">
+                    <p>12,00</p>
+                    <!--Dropdown menu voor het aantal-->
+                    <select id="quantity" name="amount">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tickets">
+                <div class="groep"><p>Kinderen (tot 12 jaar)</p></div>
+                <div class="prijs">
+                    <p>7,00</p>
+                    <!--Dropdown menu voor het aantal-->
+                    <select id="quantity" name="amount">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="div3">
+            @Model.Start <br />
             @Model.Eind
-             </div>
+            <br /><br />
         </div>
     </div>
-    
+</div>

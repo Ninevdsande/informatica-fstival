@@ -13,6 +13,8 @@
         public string Cast { get; set; }
 
         public string Poster { get; set; }
+
+        public string Speelduur { get; set; }
         
         public int Beschikbaarheid { get; set; }
 

@@ -25,7 +25,7 @@ namespace informatica_fstival.Controllers
             var films = GetAllFilms();
 
             // de lijst met producten in de html stoppen
-            return View(films.Take(4).ToList());
+            return View(films.Take(6).ToList());
         }
 
         public List<Film> GetAllFilms()
@@ -42,6 +42,8 @@ namespace informatica_fstival.Controllers
                 Film f = new Film();
                 f.Titel = row["naam"].ToString();
                 f.Poster = row["poster"].ToString();
+                f.Cast = row["cast"].ToString();
+                f.Speelduur = row["speelduur"].ToString();
                 f.Id = Convert.ToInt32(row["id"]);
 
                 // en dat product voegen we toe aan de lijst met producten
@@ -114,13 +116,6 @@ namespace informatica_fstival.Controllers
         {
             return View();
         }
-
-        [Route("detail")]
-        public IActionResult Detail()
-        {
-            return View();
-        }
-
 
         [Route("film/{id}")]
         public IActionResult FilmDetails(int id)

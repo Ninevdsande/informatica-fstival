@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\img\tijden.png" />
+    <Content Remove="wwwroot\img\zoeken.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="bin\download.jpg" />
   </ItemGroup>
 

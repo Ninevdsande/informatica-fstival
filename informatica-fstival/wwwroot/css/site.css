@@ -24,15 +24,6 @@ footer {
     padding: 20px;
 }
 
-.nieuws {
-    background-color: #FFC46B;
-    padding: 50px;
-}
-
-ul li {
-    padding: 15px;
-}
-
 .logo {
     display: block;
     margin-left: auto;
@@ -40,26 +31,61 @@ ul li {
     padding: 25px;
 }
 
+
+/*Home pagina*/
+
+.films {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    gap: 3%;
+    padding: 50px;
+    background-color: #FFC46B;
+}
+
+.film {
+    width: 14%;
+}
+
+    .film img:hover {
+        opacity: 80%;
+    }
+
+.posters {
+    width: 100%;
+}
+
+.nieuws {
+    background-color: #FFC46B;
+    padding: 50px;
+}
+
+
+/*Navigation bar*/
+
 .nav {
     overflow: hidden;
     background-color: #ff9664;
 }
 
-.nav a {
-    float: left;
-    color: #000000;
-    width: 20%;
-    text-align: center;
-    padding: 15px 0px;
-    text-decoration: none;
-}
+    .nav a {
+        float: left;
+        color: #000000;
+        width: 33.3%;
+        text-align: center;
+        padding: 15px 0px;
+        text-decoration: none;
+    }
 
-.nav a:hover {
-    background-color: #ffdca6;
-    color: #000000;
-}
+        .nav a:hover {
+            background-color: #ffdca6;
+            color: #000000;
+        }
 
-.dune {
+
+/*Detail pagina*/
+
+.detail-poster {
     width: 80%;
     padding: 35px;
 }
@@ -91,45 +117,41 @@ ul li {
     border-radius: 25px;
 }
 
-.div2-2 p {
-    text-align: center;
-}
+    .div2-2 p {
+        text-align: center;
+    }
 
 .div2-3 {
-    padding: 15px;
-}
-.div3 {
-    padding: 40px;
-    padding-top: 0px;
+    padding-top: 30px;
 }
 
-.div3-1 {
-    background-color: #d4bbdb;
-    border-radius: 25px;
-    padding: 20px;
-}
-
-.div3-1 table {
-    border-collapse: separate;
-    min-width: 60%;
-    border-spacing: 30px 15px;
-}
-
-.div3-1 td {
-    text-align: center;
-    background-color: #faaeab;
-}
-
-.films {
+.tickets {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 50px;
-    background-color: #FFC46B;
 }
 
-.film img:hover {
-    opacity: 80%;
+.prijs {
+    float: right;
+    display: flex;
+}
+
+    .prijs p {
+        width: 50px;
+    }
+
+select {
+    background-color: #faaeab;
+    border: none;
+    float: right;
+    width: 4rem;
+    margin: 10px;
+}
+
+.groep {
+    width: 40%;
+}
+
+.div3 {
+    padding: 20px;
 }
 
 .back {
@@ -137,6 +159,9 @@ ul li {
     font-size: 50px;
     border: none;
 }
+
+
+/*Contact pagina*/
 
 .input {
     position: absolute;
@@ -211,11 +236,11 @@ ul li {
     margin-bottom: 20px
 }
 
-.submit:hover {
-    border-color: #d99693;
-    background: #d99693;
-    transition: 0.3s;
-}
+    .submit:hover {
+        border-color: #d99693;
+        background: #d99693;
+        transition: 0.3s;
+    }
 
 .data {
     width: 40px;
@@ -230,6 +255,7 @@ ul li {
     width: 25px;
     padding: 7px
 }
+
 
 /*Alle films pagina*/
 
@@ -248,7 +274,7 @@ ul li {
     display: flex;
     background-color: #FFC46B;
     border-radius: 2rem;
-    width: 45%;
+    width: 31%;
 }
 
 .card-1 {
@@ -256,9 +282,13 @@ ul li {
 }
 
     .card-1 img {
-        height: 250px;
-        width: 170px;
+        height: 270px;
+        width: 190px;
     }
+
+        .card-1 img:hover {
+            opacity: 80%;
+        }
 
 .card-2 {
     padding: 10px;
@@ -266,6 +296,12 @@ ul li {
 
 
 /*Media responsive*/
+
+@media only screen and (max-width: 1100px) {
+    .card {
+        width: 45%;
+    }
+}
 
 @media only screen and (max-width: 850px) {
     .contact {
